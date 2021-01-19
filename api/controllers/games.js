@@ -44,7 +44,7 @@ module.exports.add = async (req, res, next) => {
 	console.log(req.files);
 	if (req.files && Object.keys(req.files).length > 0) {
 		if (req.files.coverImage) {
-			console.log(`req.files.coverImage ${req.files.coverImage?.path}`);
+			// console.log(`req.files.coverImage ${req.files.coverImage?.path}`);
 			coverImage = req.files.coverImage[0].path;
 			console.log(`coverImage ${coverImage}`);
 		}
