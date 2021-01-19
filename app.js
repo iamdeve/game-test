@@ -6,7 +6,9 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/tierListDB', { useNewUrlParser: true });
+mongoose.connect('mongodb://finpro-user:5lAZGi4PpgVHAiQl@cluster0-shard-00-00.kbolw.mongodb.net:27017,cluster0-shard-00-01.kbolw.mongodb.net:27017,cluster0-shard-00-02.kbolw.mongodb.net:27017/game-test?ssl=true&replicaSet=atlas-gngiox-shard-0&authSource=admin&retryWrites=true&w=majority', {
+	useNewUrlParser: true,
+});
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyparser.json());
